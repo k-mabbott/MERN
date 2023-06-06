@@ -15,8 +15,9 @@ const people = [
 function App() {
   return (
     <>
-      {people.map(person => 
+      {people.map((person, i) => 
       <PersonCard 
+        key = {i}
         firstName = {person.firstName}
         lastName = {person.lastName}
         age = {person.age}

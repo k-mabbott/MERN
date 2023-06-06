@@ -34,7 +34,6 @@ class Effect extends Card {
                 throw new Error( "Target must be a unit!" );
             }
         }
-        
 }
 
 

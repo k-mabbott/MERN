@@ -54,42 +54,86 @@ console.log(`This took ${performance.now() - start} milliseconds to run`);
 
 
 
-// const quickSort = (arr) =>{
-//     if (arr.length <= 1){
-//         return arr;
-//     }
-//     let pivot = arr[0];
-//     let start = [];
-//     let end = [];
-
-//     for (let i = 1; i < arr.length; i++) {
-//         if(arr[i] < pivot){
-//             start.push(arr[i]);
-//         }
-//         else{
-//             end.push(arr[i]);
-//         }
-//     }
-//     return [...quickSort(start), pivot, ...quickSort(end)];
-// }
-
-
-
-
-// let myArray = [3, 7, 2, 5, 1, 4, 6, 8];
-// console.log(quickSort(myArray)); // Output: [1,2,3,4,5,6,7,8]
-
-
-const story = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident culpa nihil repellat nulla laboriosam maxime, quia aliquam ipsam reprehenderit delectus reiciendis molestias assumenda aut fugit tempore laudantium tempora aspernatur? Repellendus consequatur expedita doloribus soluta cupiditate quae fugit! Aliquid, repellat animi, illum molestias maiores, laboriosam vero impedit iusto mollitia optio labore asperiores!";
-// const reversed1 = story.split("").reverse().join("");
-function rev(str){
-    let newStr = ''
-    for (let i = str.length-1; i >= 0 ;i-- ) {
-        newStr += str[i]
+const quickSort = (arr) =>{
+    if (arr.length <= 1){
+        return arr;
     }
-    return newStr;
+    let pivot = arr[0];
+    let start = [];
+    let end = [];
+
+    for (let i = 1; i < arr.length; i++) {
+        if(arr[i] < pivot){
+            start.push(arr[i]);
+        }
+        else{
+            end.push(arr[i]);
+        }
+    }
+    return [...quickSort(start), pivot, ...quickSort(end)];
 }
-console.log(rev(story))
+
+var items = [5,3,7,6,2,9];
+function swap(items, leftIndex, rightIndex){
+    var temp = items[leftIndex];
+    items[leftIndex] = items[rightIndex];
+    items[rightIndex] = temp;
+}
+function partition(items, left, right) {
+    var pivot   = items[Math.floor((right + left) / 2)], //middle element
+        i       = left, //left pointer
+        j       = right; //right pointer
+    while (i <= j) {
+        while (items[i] < pivot) {
+            i++;
+        }
+        while (items[j] > pivot) {
+            j--;
+        }
+        if (i <= j) {
+            swap(items, i, j); //sawpping two elements
+            i++;
+            j--;
+        }
+    }
+    return i;
+}
+
+function quickSort(items, left, right) {
+    var index;
+    if (items.length > 1) {
+        index = partition(items, left, right); //index returned from partition
+        if (left < index - 1) { //more elements on the left side of the pivot
+            quickSort(items, left, index - 1);
+        }
+        if (index < right) { //more elements on the right side of the pivot
+            quickSort(items, index, right);
+        }
+    }
+    return items;
+}
+
+console.log(quickSort(items, 0, items.length - 1));
+
+
+
+
+let myArray = [3, 7, 2, 5, 1, 4, 6, 8];
+console.log(quickSort(myArray)); // Output: [1,2,3,4,5,6,7,8]
+
+
+
+
+// const story = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident culpa nihil repellat nulla laboriosam maxime, quia aliquam ipsam reprehenderit delectus reiciendis molestias assumenda aut fugit tempore laudantium tempora aspernatur? Repellendus consequatur expedita doloribus soluta cupiditate quae fugit! Aliquid, repellat animi, illum molestias maiores, laboriosam vero impedit iusto mollitia optio labore asperiores!";
+// // const reversed1 = story.split("").reverse().join("");
+// function rev(str){
+//     let newStr = ''
+//     for (let i = str.length-1; i >= 0 ;i-- ) {
+//         newStr += str[i]
+//     }
+//     return newStr;
+// }
+// console.log(rev(story))
 
 
 

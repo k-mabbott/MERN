@@ -1,0 +1,10 @@
+
+
+.main {
+    background-color: #e06666;
+    /* height: 10rem; */
+    margin: 0;
+    padding: 1rem;
+    border: 2px solid black;
+    width: 75%;
+}

@@ -2,17 +2,23 @@
 import logo from './logo.svg';
 import './App.css';
 import React from 'react';
-import Header from './components/Header';
+import MyNewComponent from './components/Header';
 
 
 
 function App() {
   return (
-    <>
     <div className="App">
-      <Header firstName={ "Bill" } lastName={ "Justice" }></Header>
+        <MyNewComponent header={ "Header Prop" }>
+            <h1>These are children</h1>
+            <p>This is a child</p>
+            <div>
+              <p>Hi</p>
+            </div>
+            <p>This is another child</p>
+            <p>This is even another child</p>
+        </MyNewComponent>  
     </div>
-    </>
   );
 }
 

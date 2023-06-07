@@ -12,12 +12,13 @@ const people = [
 ]
 
 
+
 function App() {
   return (
     <>
-      {people.map((person, i) => 
+      {people.map((person) => 
       <PersonCard 
-        key = {i}
+        
         firstName = {person.firstName}
         lastName = {person.lastName}
         age = {person.age}

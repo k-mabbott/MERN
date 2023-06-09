@@ -1,0 +1,15 @@
+
+
+body{
+    padding: 3rem;
+}
+
+p {
+    margin: 0;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}

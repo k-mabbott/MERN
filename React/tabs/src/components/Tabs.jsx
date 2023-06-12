@@ -9,8 +9,8 @@ const Tabs = () => {
 
     const [tabs, setTabs] = useState({
         tab1: 'This is tab 1',
-        tab2: 'This is tab 2',
-        tab3: 'This is tab 3'
+        tab2: 'This is tab 2!!!',
+        tab3: 'This is tab 3...'
     })
 
     const displayTab = (e) => {

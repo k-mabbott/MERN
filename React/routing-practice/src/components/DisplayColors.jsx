@@ -23,3 +23,4 @@ const DisplayColors = (props) => {
 }
 
 export default DisplayColors
+

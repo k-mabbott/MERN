@@ -7,12 +7,7 @@ import PokedisplayAxios from './components/PokeDisplayAxios/PokeDisplayAxios'
 
 
 function App() {
-  // const [pokeList, setPokeList] = useState()
 
-  // const getPokes = (list) => {
-  //   setPokeList(list)
-  //   console.log('my pokemon', pokeList)
-  // }
 
 
   return (

@@ -4,7 +4,7 @@ import styles from './PokeDisplay.module.css'
 
 
 
-const PokeDisplay = (props) => {
+const PokeDisplay = () => {
 
     const [pokeList, setPokeList] = useState('')
 
@@ -16,14 +16,12 @@ const PokeDisplay = (props) => {
 
     const fetchPokes = () => {
         fetch("https://pokeapi.co/api/v2/pokemon?limit=807")
+        .then(response => response.json())       
         .then(response => {
-          // not the actual JSON response body but the entire HTTP response
-            return response.json();
-        }).then(response => {
           // we now run another promise to parse the HTTP response into usable JSON
-            // console.log(response);
+            console.log('response = ', response);
             setPokeList(response.results)
-            console.log('list',pokeList)
+            // console.log('list',pokeList)
         }).catch(err=>{
             console.log(err);
         });

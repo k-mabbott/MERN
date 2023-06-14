@@ -29,7 +29,6 @@ const Display = () => {
         .then(response => {
             // console.log(response.data)
             setShowPerson(response.data)
-            
         })
 
         .catch(err => navigate('/error'))

@@ -1,20 +1,17 @@
 
 const express = require("express");
 const app = express();
-const port = 8000;
+require('dotenv').config();
+const port = process.env.PORT;
+    
+require("./config/mongoose.config");
+    
+app.use(express.json(), express.urlencoded({ extended: true }));
+    
+const AllMyJokeRoutes = require("./routes/joke.routes");
+AllMyJokeRoutes(app);
 
-app.use( express.json() );
-app.use( express.urlencoded({ extended: true }) );
+app.listen(port, () => console.log(`Listening on port: ${port}`) );
 
 
-
-app.get("/api", (req, res) => {
-    res.send("Hello!!!!");
-});
-
-
-
-const server = app.listen(8000, () =>
-    console.log(`Server is locked and loaded on port ${server.address().port}!`)
-);
 

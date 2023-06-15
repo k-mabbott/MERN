@@ -10,13 +10,6 @@ const Box = (props) => {
     console.log('propssssss', props.boxes)
 
 
-    const boxStyle = {
-    // color: props.b
-    border: '2px solid black',
-    width: '50px',
-    height: '50px',
-    margin: '0 auto'
-    }
 
     return (
         <>

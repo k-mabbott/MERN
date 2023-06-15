@@ -7,8 +7,6 @@ import React, {useState} from 'react';
 
 
 
-
-
 function App() {
 
   const [boxes, setBoxes] = useState([])

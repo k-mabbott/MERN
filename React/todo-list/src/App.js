@@ -11,7 +11,7 @@ function App() {
   const addListItem = (item) => {
     setTodoList(currentTodos => [...currentTodos, item])
   }
-  
+
   const removeListItem = (i) => {
     setTodoList(currentTodos => currentTodos.filter((item,index) => index !== i))
   }
@@ -30,7 +30,8 @@ function App() {
     <div className="App">
       <h1>Todo list:</h1>
       < TodoForm addListItem={addListItem} />
-      < TodoDisplay todoList={todoList} removeListItem={removeListItem} completeListItem={completeListItem} />
+      < TodoDisplay todoList={todoList} removeListItem={removeListItem} 
+      completeListItem={completeListItem} />
     </div>
   );
 }

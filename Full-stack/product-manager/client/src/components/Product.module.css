@@ -1,0 +1,36 @@
+
+
+.dispOne {
+    margin: 3rem auto; 
+    padding: 2rem;
+    background-color: dimgray;
+    width: 25%;
+    border-radius: 2rem;
+    color: whitesmoke
+}
+
+.link {
+    color: black;
+    background-color:dimgrey;
+    padding: 0.2rem 0.4rem;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    box-shadow: 3px 3px 3px black;
+}
+
+.link:hover {
+    background-color: rgb(156, 156, 156);
+}
+
+.linkbtn {
+    color: black;
+    background-color:rgb(121, 61, 61);
+    padding: 0.2rem 0.4rem;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    box-shadow: 3px 3px 3px black;
+}
+
+.linkbtn:hover {
+    background-color: rgb(95, 52, 52);
+}

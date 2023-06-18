@@ -1,0 +1,10 @@
+
+
+Client Folder 
+- npm install axios react-router-dom
+
+Server Folder 
+- npm init -y
+- npm install mongoose express dotenv cors
+- nodemon server.js
+* change package.json to 'nodemon server.js' if using npm start *

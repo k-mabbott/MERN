@@ -23,23 +23,25 @@ const ProductOne = () => {
             .catch(err => {console.log(err)})
     }
 
-    useEffect(() => {getOneProduct()}, [])
-
+    
     const deleteCurr = (id) => {
         axios.delete(`http://localhost:8000/api/product/${id}`)
         .then(res => {
             console.log(res)
             navigate('/')
-    })
+        })
         .catch(err => console.log(err))
     }
 
+    const prettyNum = (num) => Number.parseFloat(num).toFixed(2)
 
+    useEffect(() => {getOneProduct()}, [])
 
     return (
         <div className={styles.dispOne} >
+
             <h3>{product.title}</h3>
-            <p>{product.price}</p>
+            <p>{prettyNum(product.price)}</p>
             <p>{product.description}</p>
             <Link className={styles.linkbtn} to={`/${product._id}/edit`} >Edit</Link> |
             | <span className={styles.linkbtn} onClick={() => deleteCurr(product._id)} >Delete</span>

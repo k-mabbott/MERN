@@ -17,7 +17,6 @@ const ProductDisplay = (props) => {
     <>
       <p>test</p>
       {
-        
         productList.map((product, i) =>
         <div key={product._id} className=''>
           <hr/>
@@ -29,7 +28,6 @@ const ProductDisplay = (props) => {
           </div>
         </div> 
         )
-        
       }
     </>
   )

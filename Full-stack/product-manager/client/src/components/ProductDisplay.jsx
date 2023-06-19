@@ -9,8 +9,8 @@ const ProductDisplay = (props) => {
 
   const deleteCurr = (id) => {
     axios.delete(`http://localhost:8000/api/product/${id}`)
-    .then(res => props.deleteProduct(id))
-    .catch(err => console.log(err))
+      .then(res => props.deleteProduct(id))
+      .catch(err => console.log(err))
   }
 
   return (

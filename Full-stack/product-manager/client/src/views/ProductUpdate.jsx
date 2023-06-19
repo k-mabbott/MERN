@@ -20,10 +20,8 @@ const ProductUpdate = () => {
         description: ''
     })
 
-
     const getOneProduct = () => {
         axios.get(`http://localhost:8000/api/product/${id}`)
-
             .then(res => {
                 console.log(res.data)
                 setFormData(res.data)})
@@ -31,7 +29,6 @@ const ProductUpdate = () => {
     }
 
     useEffect(() => {getOneProduct()}, [])
-
 
     const submitHandle = e => {
         e.preventDefault();

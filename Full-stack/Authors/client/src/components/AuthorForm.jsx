@@ -8,7 +8,6 @@ const AuthorForm = (props) => {
 
     const [formInfo, setFormInfo] = useState({...initialValues})
 
-    
     const updateForm = e => {
         const {name,value} = e.target
         setFormInfo(currentForm => ({...currentForm, [name]:value}))

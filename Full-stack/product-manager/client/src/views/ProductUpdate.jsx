@@ -5,9 +5,9 @@ import { useEffect } from 'react';
 
 const ProductUpdate = () => {
 
-    const navigate = useNavigate()
+    const navigate = useNavigate();
 
-    const { id } = useParams()
+    const { id } = useParams();
     
     const [formData, setFormData] = useState({
         title: '',

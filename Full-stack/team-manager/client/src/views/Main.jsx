@@ -1,8 +1,9 @@
 
 import React, { useEffect, useState } from 'react';
-
 import axios from 'axios'
-
+import { Link } from 'react-router-dom';
+import TeamList from '../components/TeamList'
+import Nav from '../components/Nav';
 
 
 export default () => {
@@ -11,8 +12,9 @@ export default () => {
 
 
     return (
-        <div>
-            <h1>Hello!</h1>
+        <div className='border p-4'>
+            <Nav />
+            <TeamList />
         </div>
     )
 }

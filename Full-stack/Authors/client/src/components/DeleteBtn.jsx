@@ -2,7 +2,7 @@ import React from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 
-const DeleteNoteBtn = (props) => {
+const DeleteBtn = (props) => {
 
     const navigate = useNavigate()
 
@@ -17,4 +17,4 @@ const DeleteNoteBtn = (props) => {
     )
 }
 
-export default DeleteNoteBtn
+export default DeleteBtn

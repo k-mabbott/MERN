@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import { io } from 'socket.io-client';
 
 const Chat = () => {
@@ -11,12 +11,14 @@ const Chat = () => {
     // notice that we pass a callback function to initialize the socket
     // we don't need to destructure the 'setSocket' function since we won't be updating the socket state
     const [socket] = useState(() => io(':8000'));
+    
+
 
 
     useEffect(() => {
         // we need to set up all of our event listeners
         // in the useEffect callback function
-        console.log('Is this running?');
+        // console.log('Is this running?');
         socket.on('Welcome', data => console.log('connected' + data));
 
         socket.on('message_posted', data => {
@@ -35,7 +37,6 @@ const Chat = () => {
     }
     const onMsgSend = (e) => {
         e.preventDefault()
-        
 
         socket.emit('message_from_client', `${userName}: ${msgBox}`)
 

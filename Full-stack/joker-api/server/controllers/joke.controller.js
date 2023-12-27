@@ -2,6 +2,8 @@
 
 const Joke = require('../models/joke.model');
 
+// can do all seperate module.exports or object style
+
 module.exports.findAllJokes = (req, res) => {
     Joke.find()
         .then((allDaJokes) => {
